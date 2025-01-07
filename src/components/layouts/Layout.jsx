@@ -22,15 +22,15 @@ const Layout = () => {
                     <div className="header-social">
                         <div className="header-social-item">
                             <FontAwesomeIcon className="header-social-icon" icon={faEnvelope} />
-                            Gmail
+                            <span className="header-social__name">Gmail</span>
                         </div>
                         <div className="header-social-item">
                             <FontAwesomeIcon className="header-social-icon" icon={faGithub} />
-                            Github
+                            <span className="header-social__name">Github</span>
                         </div>
                         <div className="header-social-item">
                             <FontAwesomeIcon className="header-social-icon" icon={faLinkedin} />
-                            Linkedin
+                            <span className="header-social__name">Linkedin</span>
                         </div>
                     </div>
                 </div>

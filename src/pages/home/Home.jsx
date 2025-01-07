@@ -1,8 +1,11 @@
+import './index.scss';
+import DevContainer from './components/DevContainer';
+import AboutContainer from './components/AboutContainer';
 const Home = () => {
     return (
-        <div>
-            <h1>Home Page</h1>
-            <p>Welcome to the Home Page of the Portfolio.</p>
+        <div className="home-container">
+            <DevContainer />
+            <AboutContainer />
         </div>
     );
 };

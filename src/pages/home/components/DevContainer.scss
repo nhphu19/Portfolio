@@ -1,0 +1,210 @@
+@use '../../../styles/variables' as vars;
+@use '../../../styles/mixins' as mixins;
+
+.dev-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    margin: auto;
+
+    @include mixins.desktop {
+        max-width: mixins.$breakpoint-desktop;
+    }
+    @include mixins.laptop {
+        max-width: mixins.$breakpoint-laptop;
+    }
+    @include mixins.tablet {
+        max-width: mixins.$breakpoint-tablet;
+    }
+
+    .dev-title {
+        font-size: 36px;
+        font-weight: 600;
+        color: vars.$brand-02;
+
+        @include mixins.tablet-and-mobile {
+            display: none;
+        }
+    }
+
+    .dev-wrapper {
+        color: vars.$white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 24px;
+        gap: 28px;
+
+        @include mixins.desktop {
+            flex-direction: row;
+        }
+
+        .dev-left {
+            width: 280px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 24px;
+            border: 2px solid vars.$white;
+            border-top-left-radius: 100px;
+            border-bottom-right-radius: 100px;
+            box-shadow: -4px -4px 2px 0 vars.$brand-01;
+
+            .dev-left_avatar {
+                background-color: vars.$gray;
+                height: 96px;
+                width: 96px;
+                border-radius: 50%;
+                border: 2px solid vars.$brand-02;
+                margin-bottom: 8px;
+            }
+            .dev-left__name {
+                font-size: 20px;
+                font-weight: 500;
+            }
+            .dev-left__position {
+                font-size: 14px;
+                font-weight: 400;
+                opacity: 0.9;
+            }
+            .dev-left__info {
+                width: 100%;
+                margin-top: 12px;
+
+                .dev-left__info-item {
+                    font-size: 14px;
+                    font-weight: 400;
+                    opacity: 0.9;
+                    margin-bottom: 4px;
+                    display: flex;
+                    align-items: center;
+
+                    .dev-left__info-icon {
+                        width: 16px;
+                        color: vars.$brand-01;
+                        margin-right: 4px;
+                    }
+                }
+            }
+            .dev-left__skills {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                margin-top: 8px;
+
+                .dev-left__skills-item {
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: vars.$bg-01;
+                    background-color: vars.$brand-01;
+                    padding: 2px 10px;
+                    border-radius: 12px;
+                }
+            }
+            .dev-left__button {
+                color: vars.$bg-01;
+                font-size: 18px;
+                background-color: vars.$white;
+                padding: 8px 24px;
+                border-radius: 24px;
+                margin-top: 24px;
+                cursor: pointer;
+            }
+        }
+
+        .dev-block {
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            gap: 28px;
+
+            @include mixins.tablet-and-mobile {
+                flex-direction: column;
+            }
+
+            .dev-center {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+
+                .dev-center__html-name {
+                    font-size: 12px;
+                    color: vars.$brand-02;
+                    margin-bottom: 8px;
+
+                    @include mixins.mobile {
+                        font-size: 10px;
+                    }
+                }
+                .dev-center__html-end {
+                    margin-bottom: 12px;
+                }
+                .dev-center__info-name {
+                    font-size: 24px;
+                    font-weight: 600;
+                    margin-bottom: 8px;
+                    margin-left: 12px;
+
+                    @include mixins.mobile {
+                        font-size: 20px;
+                    }
+
+                    span {
+                        color: vars.$brand-01;
+                    }
+                }
+                .dev-center__discription {
+                    font-size: 14px;
+                    font-weight: 500;
+                    margin-bottom: 8px;
+                    margin-left: 12px;
+
+                    @include mixins.mobile {
+                        font-size: 12px;
+                    }
+                }
+                .dev-center__let-talk {
+                    font-size: 18px;
+                    color: vars.$brand-01;
+                    font-weight: 500;
+                    margin-left: 12px;
+
+                    @include mixins.mobile {
+                        font-size: 15px;
+                    }
+                }
+            }
+
+            .dev-right {
+                width: 180px;
+                padding: 32px 24px;
+                background-color: vars.$bg-02;
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+                border-radius: 48px;
+
+                @include mixins.tablet-and-mobile {
+                    margin: auto;
+                }
+
+                .dev-right__item {
+                    display: flex;
+                    align-items: center;
+
+                    .dev-right__item-amount {
+                        font-size: 34px;
+                        font-weight: 600;
+                        color: vars.$brand-01;
+                        margin-right: 8px;
+                    }
+                    .dev-right__item-name {
+                        font-size: 12px;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}
