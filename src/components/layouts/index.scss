@@ -1,0 +1,56 @@
+@use '../../styles/variables' as vars;
+
+.layout-header {
+    padding: 0 40px;
+
+    .header-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 0;
+        border-bottom: 0.1px solid #fff;
+    }
+
+    .header-logo {
+        color: vars.$white;
+        font-size: 14px;
+        font-weight: 600;
+
+        span {
+            color: vars.$brand-01;
+            margin-right: 4px;
+        }
+    }
+
+    .header-nav {
+        display: flex;
+        gap: 16px;
+
+        .header-nav-item {
+            color: vars.$white;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        .header-nav-item__active {
+            color: vars.$brand-01;
+        }
+    }
+
+    .header-social {
+        display: flex;
+        gap: 16px;
+
+        .header-social-item {
+            color: vars.$white;
+            font-size: 12px;
+            font-weight: 500;
+            cursor: pointer;
+
+            .header-social-icon {
+                color: vars.$brand-01;
+                font-size: 14px;
+                margin-right: 4px;
+            }
+        }
+    }
+}
