@@ -1,0 +1,151 @@
+@use '../../../styles/variables' as vars;
+@use '../../../styles/mixins' as mixins;
+
+.project-container {
+    .project-wrapper {
+        padding: 40px 24px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include mixins.desktop {
+            max-width: mixins.$breakpoint-desktop;
+        }
+        @include mixins.laptop {
+            max-width: mixins.$breakpoint-laptop;
+        }
+        @include mixins.tablet {
+            max-width: mixins.$breakpoint-tablet;
+        }
+
+        .project-mouse-scroll {
+            width: 20px;
+
+            @include mixins.tablet-and-mobile {
+                display: none;
+            }
+
+            img {
+                width: 20px;
+            }
+        }
+
+        .project-title {
+            font-size: 36px;
+            font-weight: 600;
+            color: vars.$brand-01;
+            padding: 8px 0;
+            margin-top: 16px;
+            border-bottom: 2px solid vars.$brand-01;
+        }
+
+        .project-sub-title {
+            font-size: 12px;
+            font-weight: 500;
+            color: vars.$white;
+            opacity: 0.8;
+            margin-top: 8px;
+        }
+
+        .project-block {
+            display: flex;
+            gap: 60px;
+            padding: 32px 0;
+            margin-top: 20px;
+            align-items: center;
+            border-bottom: 1px solid vars.$white;
+            border-top: 1px solid vars.$white;
+
+            @include mixins.mobile {
+                flex-direction: column;
+                gap: 24px;
+            }
+
+            @include mixins.tablet {
+                align-items: start;
+            }
+
+            .project-block__img {
+                width: 160px;
+                border-radius: 8px;
+
+                img {
+                    width: 160px;
+                    border-radius: 8px;
+                }
+            }
+
+            .project-block__content {
+                .project-block__title {
+                    font-size: 24px;
+                    font-weight: 500px;
+                    color: vars.$brand-01;
+                }
+                .project-block__description {
+                    font-size: 14px;
+                    font-weight: 500px;
+                    color: vars.$white;
+                    margin: 16px 0;
+                }
+            }
+
+            .project-block__readmore {
+                font-size: 16px;
+                font-weight: 500px;
+                color: vars.$brand-01;
+            }
+
+            .project-block__extend {
+                display: flex;
+                align-items: start;
+                gap: 16px;
+                color: vars.$white;
+                font-weight: 500px;
+                font-size: 14px;
+                margin-top: 16px;
+
+                @include mixins.mobile {
+                    flex-direction: column;
+                }
+
+                .project-block__extend-tag {
+                    padding: 4px 8px;
+                    background-color: vars.$gray;
+                    border-radius: 16px;
+                }
+                .project-block__extend-list {
+                    flex: 1;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    gap: 16px;
+
+                    .project-block__extend-item {
+                        display: flex;
+                        align-items: center;
+                        gap: 6px;
+
+                        .project-block__extend-label {
+                            font-weight: 600px;
+                        }
+                        .project-block__extend-value {
+                            opacity: 0.7;
+                        }
+                    }
+                }
+            }
+        }
+
+        .project-button {
+            color: vars.$bg-01;
+            font-weight: 500px;
+            font-size: 16px;
+            background-color: vars.$brand-01;
+            border-radius: 20px;
+            padding: 12px 24px;
+            margin-top: 32px;
+            cursor: pointer;
+        }
+    }
+}

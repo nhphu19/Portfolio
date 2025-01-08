@@ -1,0 +1,110 @@
+@use '../../../styles/variables' as vars;
+@use '../../../styles/mixins' as mixins;
+
+.contact-container {
+    background-color: vars.$bg-02;
+
+    .contact-wrapper {
+        padding: 40px 24px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include mixins.desktop {
+            max-width: mixins.$breakpoint-desktop;
+        }
+        @include mixins.laptop {
+            max-width: mixins.$breakpoint-laptop;
+        }
+        @include mixins.tablet {
+            max-width: mixins.$breakpoint-tablet;
+        }
+
+        .contact-mouse-scroll {
+            width: 20px;
+
+            @include mixins.tablet-and-mobile {
+                display: none;
+            }
+
+            img {
+                width: 20px;
+            }
+        }
+
+        .contact-title {
+            font-size: 36px;
+            font-weight: 600;
+            color: vars.$brand-01;
+            padding: 8px 0;
+            margin-top: 16px;
+            border-bottom: 2px solid vars.$brand-01;
+        }
+
+        .contact-sub-title {
+            font-size: 12px;
+            font-weight: 500;
+            color: vars.$white;
+            opacity: 0.8;
+            margin-top: 8px;
+        }
+
+        .contact-lable {
+            font-size: 20px;
+            font-weight: 500;
+            color: vars.$brand-01;
+            padding: 12px 32px;
+            border-top-left-radius: 24px;
+            border-bottom-right-radius: 24px;
+            border: 1px solid vars.$brand-01;
+            margin-top: 40px;
+        }
+
+        .contact-form {
+            display: flex;
+            gap: 40px;
+            margin: 24px 0;
+            width: 100%;
+
+            @include mixins.desktop {
+                padding: 0 40px;
+            }
+            @include mixins.mobile {
+                gap: 16px;
+            }
+
+            .contact-form__item {
+                flex: 1;
+
+                .contact-form__item-lable {
+                    color: vars.$brand-01;
+                    font-weight: 400px;
+                    font-size: 12px;
+                }
+                .contact-form__item-input {
+                    width: 100%;
+                    margin-top: 8px;
+                    padding: 4px 8px;
+                    background-color: transparent;
+                    border: none;
+                    border-bottom: 1px solid vars.$brand-02;
+                    color: vars.$white;
+                    font-weight: 500px;
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .contact-button {
+            color: vars.$bg-01;
+            font-weight: 500px;
+            font-size: 16px;
+            background-color: vars.$brand-01;
+            border-radius: 20px;
+            padding: 12px 24px;
+            margin-top: 32px;
+            cursor: pointer;
+        }
+    }
+}

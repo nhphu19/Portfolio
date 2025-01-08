@@ -41,7 +41,36 @@ const Layout = () => {
             </main>
 
             <footer className="layout-footer">
-                <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+                <div className="footer-icons footer-icons__hidden">
+                    <div className="footer-icons__item">
+                        <FontAwesomeIcon className="footer-icons__item-icon" icon={faEnvelope} />
+                    </div>
+                    <div className="footer-icons__item">
+                        <FontAwesomeIcon className="footer-icons__item-icon" icon={faGithub} />
+                    </div>
+                    <div className="footer-icons__item">
+                        <FontAwesomeIcon className="footer-icons__item-icon" icon={faLinkedin} />
+                    </div>
+                </div>
+                <div className="footer-left">© 2023 SinanTokmak. All rights reserved.</div>
+                <div className="footer-center">
+                    <div className="footer-center__item">Privacy Policy</div>
+                    <div className="footer-center__item">Terms & Conditions</div>
+                </div>
+                <div className="footer-icons">
+                    <div className="footer-icons__item">
+                        <FontAwesomeIcon className="footer-icons__item-icon" icon={faEnvelope} />
+                    </div>
+                    <div className="footer-icons__item">
+                        <FontAwesomeIcon className="footer-icons__item-icon" icon={faGithub} />
+                    </div>
+                    <div className="footer-icons__item">
+                        <FontAwesomeIcon className="footer-icons__item-icon" icon={faLinkedin} />
+                    </div>
+                </div>
+                <div className="footer-right">
+                    Design By <span>PhuNguyen</span>
+                </div>
             </footer>
         </div>
     );
