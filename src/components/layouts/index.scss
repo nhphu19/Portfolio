@@ -3,6 +3,17 @@
 
 .layout-header {
     padding: 0 40px;
+    margin: auto;
+
+    @include mixins.desktop {
+        max-width: mixins.$breakpoint-desktop;
+    }
+    @include mixins.laptop {
+        max-width: mixins.$breakpoint-laptop;
+    }
+    @include mixins.tablet {
+        max-width: mixins.$breakpoint-tablet;
+    }
 
     .header-container {
         display: flex;

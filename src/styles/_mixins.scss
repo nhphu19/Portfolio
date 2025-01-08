@@ -34,3 +34,8 @@ $breakpoint-mobile: 425px;
         @content;
     }
 }
+
+@mixin grid-responsive($columns) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+}
