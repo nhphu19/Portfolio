@@ -15,9 +15,15 @@ const Layout = () => {
                         NgoNghinh
                     </div>
                     <div className="header-nav">
-                        <div className="header-nav-item header-nav-item__active">Home</div>
-                        <div className="header-nav-item">About</div>
-                        <div className="header-nav-item">Projects</div>
+                        <a href="/" className="header-nav-item header-nav-item__active">
+                            Home
+                        </a>
+                        <a href="/projects" className="header-nav-item">
+                            About
+                        </a>
+                        <a href="/projects" className="header-nav-item">
+                            Projects
+                        </a>
                     </div>
                     <div className="header-social">
                         <div className="header-social-item">
