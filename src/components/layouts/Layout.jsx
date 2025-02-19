@@ -1,4 +1,4 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import './index.scss';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -6,6 +6,10 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const Layout = () => {
+    const location = useLocation();
+    const paths = location.pathname.split('/').filter(Boolean);
+    const navLink = paths[paths.length - 1];
+
     return (
         <div className="layout">
             <header className="layout-header">
@@ -15,13 +19,19 @@ const Layout = () => {
                         NgoNghinh
                     </div>
                     <div className="header-nav">
-                        <a href="/" className="header-nav-item header-nav-item__active">
+                        <a href="/" className={`header-nav-item ${!navLink ? 'header-nav-item__active' : ''}`}>
                             Home
                         </a>
-                        <a href="/projects" className="header-nav-item">
+                        <a
+                            href="/projects"
+                            className={`header-nav-item ${navLink == 'about' ? 'header-nav-item__active' : ''}`}
+                        >
                             About
                         </a>
-                        <a href="/projects" className="header-nav-item">
+                        <a
+                            href="/projects"
+                            className={`header-nav-item ${navLink == 'projects' ? 'header-nav-item__active' : ''}`}
+                        >
                             Projects
                         </a>
                     </div>

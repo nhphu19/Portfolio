@@ -3,7 +3,7 @@
 
 .project-container {
     .project-wrapper {
-        padding: 40px 24px;
+        padding: 80px 24px;
         margin: auto;
         display: flex;
         flex-direction: column;
@@ -48,89 +48,149 @@
             margin-top: 8px;
         }
 
-        .project-block {
-            display: flex;
-            gap: 60px;
-            padding: 32px 0;
+        .project-block-list {
             margin-top: 20px;
-            align-items: center;
-            border-bottom: 1px solid vars.$white;
-            border-top: 1px solid vars.$white;
 
-            @include mixins.mobile {
-                flex-direction: column;
-                gap: 24px;
-            }
-
-            @include mixins.tablet {
-                align-items: start;
-            }
-
-            .project-block__img {
-                width: 160px;
-                border-radius: 8px;
-
-                img {
-                    width: 160px;
-                    border-radius: 8px;
-                }
-            }
-
-            .project-block__content {
-                .project-block__title {
-                    font-size: 24px;
-                    font-weight: 500px;
-                    color: vars.$brand-01;
-                }
-                .project-block__description {
-                    font-size: 14px;
-                    font-weight: 500px;
-                    color: vars.$white;
-                    margin: 16px 0;
-                }
-            }
-
-            .project-block__readmore {
-                font-size: 16px;
-                font-weight: 500px;
-                color: vars.$brand-01;
-            }
-
-            .project-block__extend {
+            .project-block {
                 display: flex;
+                gap: 60px;
+                padding: 32px 0;
                 align-items: start;
-                gap: 16px;
-                color: vars.$white;
-                font-weight: 500px;
-                font-size: 14px;
-                margin-top: 16px;
+                // border-bottom: 1px solid vars.$white;
+                border-top: 1px solid vars.$white;
+
+                &:last-child {
+                    border-bottom: 1px solid vars.$white;
+                }
 
                 @include mixins.mobile {
                     flex-direction: column;
-                }
-
-                .project-block__extend-tag {
-                    padding: 4px 8px;
-                    background-color: vars.$gray;
-                    border-radius: 16px;
-                }
-                .project-block__extend-list {
-                    flex: 1;
-                    display: flex;
-                    flex-wrap: wrap;
+                    gap: 24px;
                     align-items: center;
-                    gap: 16px;
+                }
 
-                    .project-block__extend-item {
+                @include mixins.tablet {
+                    align-items: start;
+                }
+
+                .project-block__img {
+                    width: 160px;
+                    border-radius: 8px;
+                    margin-top: 40px;
+
+                    @include mixins.mobile {
+                        margin-top: 0;
+                    }
+
+                    img {
+                        width: 160px;
+                        border-radius: 8px;
+                    }
+
+                    .project-block__links {
+                        display: flex;
+                        justify-content: center;
+                        gap: 16px;
+                        margin-top: 12px;
+                    }
+                    .project-block__title-link {
+                        font-size: 30px;
+                    }
+                }
+
+                .project-block__content {
+                    .project-block__title {
                         display: flex;
                         align-items: center;
-                        gap: 6px;
+                        gap: 20px;
+                        font-size: 28px;
+                        font-weight: 500;
+                        color: vars.$brand-01;
+                        margin-bottom: 12px;
+                    }
+                    .project-block__description {
+                        font-size: 16px;
+                        font-weight: 500px;
+                        color: vars.$white;
+                        margin: 16px 0;
+                    }
+                    .project-block__extend-tag {
+                        color: vars.$white;
+                        padding: 6px 12px;
+                        background-color: vars.$gray;
+                        border-radius: 16px;
+                        display: inline;
+                    }
+                }
 
-                        .project-block__extend-label {
-                            font-weight: 600px;
+                .project-block__skills {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 8px;
+                    margin-top: 12px;
+
+                    .project-block__skills-item {
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: vars.$bg-01;
+                        background-color: vars.$brand-01;
+                        padding: 2px 10px;
+                        border-radius: 12px;
+                    }
+                }
+
+                .project-block__contributions {
+                    padding: 16px 24px;
+                    background-color: vars.$bg-02;
+                    border-radius: 16px;
+
+                    .project-block__contributions-title {
+                        font-size: 16px;
+                        font-weight: 500;
+                        color: vars.$brand-01;
+                    }
+
+                    .project-block__contributions-list {
+                        .project-block__contributions-item {
+                            font-size: 13px;
+                            font-weight: 500;
+                            color: vars.$white;
+                            margin: 4px 20px;
                         }
-                        .project-block__extend-value {
-                            opacity: 0.7;
+                    }
+                }
+
+                .project-block__extend {
+                    display: flex;
+                    align-items: start;
+                    gap: 16px;
+                    color: vars.$white;
+                    font-weight: 500px;
+                    font-size: 14px;
+                    margin-top: 16px;
+
+                    @include mixins.mobile {
+                        flex-direction: column;
+                    }
+
+                    .project-block__extend-list {
+                        flex: 1;
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        gap: 16px;
+
+                        .project-block__extend-item {
+                            display: flex;
+                            align-items: center;
+                            gap: 6px;
+
+                            .project-block__extend-label {
+                                font-weight: 600px;
+                            }
+                            .project-block__extend-value {
+                                opacity: 0.7;
+                            }
                         }
                     }
                 }
@@ -145,7 +205,6 @@
             border-radius: 20px;
             padding: 12px 24px;
             margin-top: 32px;
-            cursor: pointer;
         }
     }
 }

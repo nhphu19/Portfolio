@@ -1,6 +1,37 @@
 import './ProjectContainer.scss';
-import aboutMeImg from '../../../assets/images/home/about-me.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGooglePlay, faAppStore } from '@fortawesome/free-brands-svg-icons';
 import mouseScrollImg from '../../../assets/icons/home/mouse-scroll.png';
+import calibeeImg from '../../../assets/images/project/calibee.webp';
+
+const projectInfo = {
+    name: 'Calibee App',
+    role: 'Back-end Developer',
+    thumbnail: calibeeImg,
+    links: [
+        {
+            url: 'https://play.google.com/store/apps/details?id=com.wolfsolusions.calibee.customer.prod&hl=vi&pli=1',
+            icon: faGooglePlay,
+        },
+        {
+            url: 'https://apps.apple.com/vn/app/calibee-cleaning-repair/id6443800125',
+            icon: faAppStore,
+        },
+    ],
+    description:
+        'Calibee is an application that provides repair, cleaning, and household care services,catering to both Vietnamese and foreigners living in Vietnam',
+    contributions: [
+        'Participated in database design and construction (> 20 Models)',
+        'Developed APIs for the Customer App',
+        'Developed APIs for Partner App',
+    ],
+    technologies: ['Javascript', 'ExpressJs', 'NodeJs', 'Dart', 'Flutter', 'MySQL', 'AWS', 'Firebase'],
+    extends: {
+        timeline: 'Nov.2022 – May.2023',
+        teamSize: '10',
+        country: 'Vietnam',
+    },
+};
 
 const ProjectContainer = () => {
     return (
@@ -11,40 +42,81 @@ const ProjectContainer = () => {
                 </div>
 
                 <div className="project-title">Projects</div>
-                <div className="project-sub-title">I am striving to never stop learning and improving</div>
+                <div className="project-sub-title">
+                    Below are the projects I worked on at various companies to gain experience.
+                </div>
 
-                <div className="project-block">
-                    <div className="project-block__img">
-                        <img src={aboutMeImg} alt="" />
-                    </div>
-                    <div className="project-block__content">
-                        <div className="project-block__title">What does it take to become a web developer?</div>
-                        <div className="project-block__description">
-                            Web development, also known as website development, encompasses a variety of tasks and
-                            processes involved in creating websites for the internet…
+                <div className="project-block-list">
+                    <div className="project-block">
+                        <div className="project-block__img">
+                            <img src={projectInfo.thumbnail} alt="" />
+
+                            <div className="project-block__links">
+                                {projectInfo.links.map((link, index) => (
+                                    <a
+                                        key={index}
+                                        href={link.url}
+                                        target="_blank"
+                                        className="project-block__title-link"
+                                    >
+                                        <FontAwesomeIcon className="dev-left__info-icon" icon={link.icon} />
+                                    </a>
+                                ))}
+                            </div>
                         </div>
-                        <div className="project-block__readmore">Read more &gt;&gt;</div>
-                        <div className="project-block__extend">
-                            <div className="project-block__extend-tag">Web Developer</div>
-                            <div className="project-block__extend-list">
-                                <div className="project-block__extend-item">
-                                    <div className="project-block__extend-label">Test</div>
-                                    <div className="project-block__extend-value">Sihan</div>
-                                </div>
-                                <div className="project-block__extend-item">
-                                    <div className="project-block__extend-label">Date</div>
-                                    <div className="project-block__extend-value">10.Oct.2023</div>
-                                </div>
-                                <div className="project-block__extend-item">
-                                    <div className="project-block__extend-label">Lesson</div>
-                                    <div className="project-block__extend-value">10/100</div>
+                        <div className="project-block__content">
+                            <div className="project-block__title">{projectInfo.name}</div>
+
+                            <div className="project-block__extend-tag">{projectInfo.role}</div>
+
+                            <div className="project-block__description">{projectInfo.description}.</div>
+
+                            <div className="project-block__contributions">
+                                <div className="project-block__contributions-title">Contributions</div>
+                                <ul className="project-block__contributions-list">
+                                    {projectInfo.contributions.map((contribution, index) => (
+                                        <li key={index} className="project-block__contributions-item">
+                                            {contribution}.
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+
+                            <div className="project-block__skills">
+                                {projectInfo.technologies.map((skill, index) => (
+                                    <div key={index} className="project-block__skills-item">
+                                        {skill}
+                                    </div>
+                                ))}
+                            </div>
+
+                            <div className="project-block__extend">
+                                <div className="project-block__extend-list">
+                                    <div className="project-block__extend-item">
+                                        <div className="project-block__extend-label">Timeline</div>
+                                        <div className="project-block__extend-value">
+                                            {projectInfo.extends.timeline}
+                                        </div>
+                                    </div>
+                                    <div className="project-block__extend-item">
+                                        <div className="project-block__extend-label">Team Size</div>
+                                        <div className="project-block__extend-value">
+                                            {projectInfo.extends.teamSize}
+                                        </div>
+                                    </div>
+                                    <div className="project-block__extend-item">
+                                        <div className="project-block__extend-label">Country</div>
+                                        <div className="project-block__extend-value">{projectInfo.extends.country}</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div className="project-button">View More</div>
+                <a href="/projects" className="project-button">
+                    View More
+                </a>
             </div>
         </div>
     );

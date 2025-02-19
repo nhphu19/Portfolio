@@ -19,20 +19,20 @@ const AboutContainer = () => {
                                 <span>Hello!</span>
                             </span>
                             <span className="about-content__info-name">
-                                My name is Sinan and I specialize in web developement that utilizes HTML, CSS, JS, and
-                                REACT etc.
+                                I am a software engineer with 2 years of experience in web development.
                             </span>
                             <span className="about-content__info-name">
-                                I am a highly motivated individual and eternal optimist dedicated to writing clear,
-                                concise, robust code that works. Striving to never stop learning and improving.
+                                I have experience in developing web applications using Javascript, Typescript, NodeJs,
+                                ReactJS, VueJs, PHP, Laravel, ...
                             </span>
                             <span className="about-content__info-name">
-                                When I'm not coding, I am writing bolgs, reading, or picking up some new hands-on art
-                                project like photography.
+                                I am seeking opportunities to further enhance my skills and knowledge in a professional
+                                environment, collaborating with experienced professionals and staying updated with
+                                industry trends.
                             </span>
                             <span className="about-content__info-name">
-                                I like to have my perspective and belief systems challenged so that I see the world
-                                through new eyes.
+                                I am committed to continuous learning and eager to contribute my expertise to meaningful
+                                projects while pursuing personal and professional growth.
                             </span>
                             <span className="about-content__html-name">&lt;/p&gt;</span>
                         </div>

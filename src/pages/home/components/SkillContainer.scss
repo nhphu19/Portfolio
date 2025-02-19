@@ -7,7 +7,7 @@
     background-size: contain;
 
     .skill-wrapper {
-        padding: 40px 24px;
+        padding: 80px 24px;
         margin: auto;
         display: flex;
         flex-direction: column;
@@ -53,9 +53,14 @@
         }
 
         .skill-block {
-            display: flex;
             gap: 60px;
             margin-top: 20px;
+
+            @include mixins.grid-responsive(2);
+            @include mixins.tablet-and-mobile {
+                @include mixins.grid-responsive(1);
+                gap: 40px;
+            }
 
             @include mixins.mobile {
                 flex-direction: column;
@@ -72,91 +77,21 @@
                 border-left: 4px solid #0c73b8;
                 gap: 6px;
 
-                .skill-block__item-icon {
-                    font-size: 24px;
-                }
                 .skill-block__item-name {
                     font-size: 16px;
                     color: vars.$bg-01;
-                    font-weight: 500;
+                    font-weight: 700;
                 }
                 .skill-block__item-sub-name {
                     font-size: 12px;
                     color: vars.$gray;
                     font-weight: 500;
+                    text-align: center;
                 }
             }
-        }
 
-        .skill-list {
-            gap: 60px;
-            flex-wrap: wrap;
-            margin-top: 32px;
-
-            @include mixins.grid-responsive(4);
-            @include mixins.tablet-and-mobile {
-                @include mixins.grid-responsive(2);
-                gap: 40px;
-            }
-
-            .skill-list__item {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 12px;
-
-                .skill-list__item-brand {
-                    width: 100px;
-                    height: 100px;
-                    border-radius: 50%;
-                    background-color: #0c73b8;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-
-                    @include mixins.mobile {
-                        width: 80px;
-                        height: 80px;
-                    }
-
-                    .skill-list__item-icon {
-                        font-size: 40px;
-                        color: vars.$white;
-
-                        @include mixins.mobile {
-                            font-size: 32px;
-                        }
-                    }
-                }
-                .skill-list__item-brand.html {
-                    background-color: #e54f26;
-                }
-                .skill-list__item-brand.css {
-                    background-color: #0c73b8;
-                }
-                .skill-list__item-brand.nodejs {
-                    background-color: #e7a020;
-                }
-                .skill-list__item-brand.react {
-                    background-color: #28a9e0;
-                }
-                .skill-list__item-name {
-                    font-size: 20px;
-                    font-style: 600;
-                    text-transform: uppercase;
-                }
-                .skill-list__item-name.html {
-                    color: #e54f26;
-                }
-                .skill-list__item-name.css {
-                    color: #0c73b8;
-                }
-                .skill-list__item-name.nodejs {
-                    color: #e7a020;
-                }
-                .skill-list__item-name.react {
-                    color: #28a9e0;
-                }
+            .skill-block__item--active {
+                background-color: #00ffdb;
             }
         }
     }

@@ -12,5 +12,7 @@ body {
 }
 
 a {
+    color: vars.$white;
     text-decoration: none;
+    cursor: pointer;
 }

@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px 24px;
+    padding: 80px 24px;
     margin: auto;
 
     @include mixins.desktop {
@@ -58,6 +58,13 @@
                 border-radius: 50%;
                 border: 2px solid vars.$brand-02;
                 margin-bottom: 8px;
+                overflow: hidden;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 50%;
+                }
             }
             .dev-left__name {
                 font-size: 20px;
@@ -69,14 +76,17 @@
                 opacity: 0.9;
             }
             .dev-left__info {
+                display: flex;
+                flex-direction: column;
                 width: 100%;
                 margin-top: 12px;
+                gap: 6px;
 
                 .dev-left__info-item {
                     font-size: 14px;
                     font-weight: 400;
                     opacity: 0.9;
-                    margin-bottom: 4px;
+                    // margin-bottom: 4px;
                     display: flex;
                     align-items: center;
 
@@ -91,7 +101,7 @@
                 display: flex;
                 flex-wrap: wrap;
                 gap: 8px;
-                margin-top: 8px;
+                margin-top: 12px;
 
                 .dev-left__skills-item {
                     font-size: 14px;
@@ -182,7 +192,7 @@
                 background-color: vars.$bg-02;
                 display: flex;
                 flex-direction: column;
-                gap: 40px;
+                gap: 36px;
                 border-radius: 48px;
 
                 @include mixins.tablet-and-mobile {
@@ -197,7 +207,16 @@
                         font-size: 34px;
                         font-weight: 600;
                         color: vars.$brand-01;
-                        margin-right: 8px;
+                        margin-right: 20px;
+                        position: relative;
+
+                        &::after {
+                            content: '+';
+                            position: absolute;
+                            top: 4px;
+                            right: -12px;
+                            font-size: 18px;
+                        }
                     }
                     .dev-right__item-name {
                         font-size: 12px;

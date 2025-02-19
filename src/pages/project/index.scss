@@ -7,10 +7,4 @@
     @include mixins.tablet-and-mobile {
         min-height: calc(100vh - 68px - 131px);
     }
-
-    .project-wrapper {
-        .project-block {
-            margin-top: 40px;
-        }
-    }
 }
