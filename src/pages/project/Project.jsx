@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './index.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGooglePlay, faAppStore } from '@fortawesome/free-brands-svg-icons';
+import { faLink } from '@fortawesome/free-solid-svg-icons';
 import calibeeImg from '../../assets/images/project/calibee.webp';
 import calibeeAdminImg from '../../assets/images/project/calibee_admin.png';
 import BC190Img from '../../assets/images/project/BC190.png';
@@ -9,8 +10,9 @@ import stockImg from '../../assets/images/project/stock.png';
 import exchangeImg from '../../assets/images/project/exchange.png';
 import bvisImg from '../../assets/images/project/bvis.png';
 import bvisAdminImg from '../../assets/images/project/bvis_admin.png';
+import tmdbCloneImg from '../../assets/images/project/tmdb_clone.png';
 
-const projectsInfo = [
+const companyProjects = [
     {
         name: 'Calibee App',
         role: 'Back-end Developer',
@@ -41,7 +43,7 @@ const projectsInfo = [
     },
     {
         name: 'Calibee Admin',
-        role: 'Fullstack developer',
+        role: 'Fullstack Developer',
         thumbnail: calibeeAdminImg,
         links: [],
         description:
@@ -60,7 +62,7 @@ const projectsInfo = [
     },
     {
         name: 'BC190',
-        role: 'Fullstack developer',
+        role: 'Fullstack Developer',
         thumbnail: BC190Img,
         links: [],
         description:
@@ -75,7 +77,7 @@ const projectsInfo = [
     },
     {
         name: 'Stock Series',
-        role: 'Front-end developer',
+        role: 'Front-end Developer',
         thumbnail: stockImg,
         links: [],
         description:
@@ -90,7 +92,7 @@ const projectsInfo = [
     },
     {
         name: 'Exchange Series',
-        role: 'Front-end developer',
+        role: 'Front-end Developer',
         thumbnail: exchangeImg,
         links: [],
         description:
@@ -105,7 +107,7 @@ const projectsInfo = [
     },
     {
         name: 'Bvis App H5',
-        role: 'Front-end developer',
+        role: 'Front-end Developer',
         thumbnail: bvisImg,
         links: [],
         description:
@@ -120,7 +122,7 @@ const projectsInfo = [
     },
     {
         name: 'Bvis Admin',
-        role: 'Front-end developer',
+        role: 'Front-end Developer',
         thumbnail: bvisAdminImg,
         links: [],
         description:
@@ -135,7 +137,51 @@ const projectsInfo = [
     },
 ];
 
+const personalProjects = [
+    {
+        name: 'TMDB Clone',
+        role: 'Front-end Developer',
+        thumbnail: tmdbCloneImg,
+        links: [
+            {
+                url: 'https://tmdb.nhphu19.info/movie',
+                icon: faLink,
+            },
+        ],
+        description:
+            'TMDB_Clone is a website based on themoviedb.org. It provides access to millions of movies, TV shows, and people to explore',
+        contributions: ['Built the website using the pre-designed interface and available API'],
+        technologies: ['Typescript', 'VueJs', 'VueX', 'SCSS', 'Tailwindcss', 'AWS'],
+        extends: {
+            timeline: 'Oct.2024 – Jan.2025',
+            teamSize: null,
+            country: null,
+        },
+    },
+    {
+        name: '100 Days of JavaScript',
+        role: 'Full-stack Developer',
+        thumbnail: tmdbCloneImg,
+        links: [
+            {
+                url: 'https://100daysjavascript.nhphu19.info/',
+                icon: faLink,
+            },
+        ],
+        description: 'A personal collection of self-learning JavaScript',
+        contributions: ['Creating a collection of 100 JavaScript lessons'],
+        technologies: ['Javascript', 'HTML', 'CSS', 'JQuery', 'AWS'],
+        extends: {
+            timeline: 'Oct.2024 – Jan.2025',
+            teamSize: null,
+            country: null,
+        },
+    },
+];
+
 const Project = () => {
+    const [activeTab, setActiveTab] = useState('company');
+
     return (
         <div className="project-container">
             <div className="project-wrapper">
@@ -144,8 +190,23 @@ const Project = () => {
                     Below are the projects I worked on at various companies to gain experience.
                 </div>
 
+                <div className="project-tabs">
+                    <div
+                        className={`project-tab-item ${activeTab === 'company' ? 'project-tab-item--active' : ''}`}
+                        onClick={() => setActiveTab('company')}
+                    >
+                        Company Projects
+                    </div>
+                    <div
+                        className={`project-tab-item ${activeTab === 'personal' ? 'project-tab-item--active' : ''}`}
+                        onClick={() => setActiveTab('personal')}
+                    >
+                        Personal Projects
+                    </div>
+                </div>
+
                 <div className="project-block-list">
-                    {projectsInfo.map((projectInfo, index) => (
+                    {(activeTab === 'company' ? companyProjects : personalProjects).map((projectInfo, index) => (
                         <div key={index} className="project-block">
                             <div className="project-block__img">
                                 <img src={projectInfo.thumbnail} alt="" />

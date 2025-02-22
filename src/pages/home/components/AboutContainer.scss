@@ -35,80 +35,98 @@
             }
         }
 
-        .about-content {
-            display: flex;
-            flex-direction: column;
-            gap: 40px;
-            color: vars.$white;
-            margin-top: 32px;
+        .about-title {
+            font-size: 36px;
+            font-weight: 600;
+            color: vars.$brand-01;
+            padding: 8px 0;
+            margin-top: 16px;
+            border-bottom: 2px solid vars.$brand-01;
+        }
 
-            @include mixins.desktop {
-                flex-direction: row;
+        .about-content__group {
+            display: flex;
+            gap: 32px;
+            width: 100%;
+
+            @include mixins.tablet-and-mobile {
+                flex-direction: column;
             }
 
-            .about-content__left {
+            .about-content {
+                margin-top: 0;
+            }
+        }
+
+        .about-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            color: vars.$white;
+            margin-top: 32px;
+            width: 100%;
+
+            .about-content__left-title {
+                display: flex;
+
+                .about-content__left-title-item {
+                    font-size: 16px;
+
+                    @include mixins.mobile {
+                        font-size: 12px;
+                    }
+
+                    &:first-child {
+                        padding: 12px 24px;
+                        text-align: center;
+                        background-color: vars.$bg-01;
+                        border: 1px solid vars.$brand-01;
+                        border-top-left-radius: 16px;
+                        border-bottom-right-radius: 16px;
+                    }
+
+                    &:last-child {
+                        flex: 1;
+                    }
+                }
+            }
+            .about-content__left-description {
                 flex: 1;
                 display: flex;
                 flex-direction: column;
-                gap: 20px;
+                padding: 12px;
+                background-color: vars.$bg-01;
+                border-radius: 12px;
 
-                .about-content__left-title {
-                    width: 140px;
-                    padding: 12px 0;
-                    font-size: 20px;
-                    text-align: center;
-                    background-color: vars.$bg-01;
-                    border: 1px solid vars.$brand-01;
-                    border-top-left-radius: 16px;
-                    border-bottom-right-radius: 16px;
-                }
-                .about-content__left-description {
-                    display: flex;
-                    flex-direction: column;
-                    padding: 12px;
-                    background-color: vars.$bg-01;
-                    border-radius: 12px;
-
-                    .about-content__html-name {
-                        font-size: 12px;
-                        color: vars.$brand-02;
-                        margin-bottom: 8px;
-
-                        @include mixins.mobile {
-                            font-size: 10px;
-                        }
-                    }
-                    .about-content__info-name {
-                        font-size: 14px;
-                        font-weight: 500;
-                        margin-bottom: 8px;
-                        margin-left: 8px;
-
-                        @include mixins.mobile {
-                            font-size: 12px;
-                        }
-
-                        span {
-                            color: vars.$brand-01;
-                        }
-                    }
-                }
-            }
-
-            .about-content__right {
-                width: 280px;
-                margin: auto;
-
-                @include mixins.mobile {
-                    width: 200px;
-                }
-
-                img {
-                    width: 280px;
+                .about-content__html-name {
+                    font-size: 12px;
+                    color: vars.$brand-02;
+                    margin-bottom: 10px;
 
                     @include mixins.mobile {
-                        width: 200px;
+                        font-size: 10px;
                     }
+                }
+                .about-content__info-name {
+                    font-size: 14px;
+                    font-weight: 500;
+                    margin-bottom: 12px;
+                    margin-left: 12px;
+
+                    @include mixins.mobile {
+                        font-size: 12px;
+                    }
+
+                    span {
+                        color: vars.$brand-01;
+                    }
+                }
+                .about-content__tab.about-content__html-name {
+                    margin-left: 12px;
+                }
+                .about-content__tab.about-content__info-name {
+                    margin-left: 24px;
                 }
             }
         }

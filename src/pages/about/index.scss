@@ -1,0 +1,14 @@
+@use '../../styles/variables' as vars;
+@use '../../styles/mixins' as mixins;
+
+.about-container-page {
+    min-height: calc(100vh - 68px - 53px);
+
+    @include mixins.tablet-and-mobile {
+        min-height: calc(100vh - 68px - 131px);
+    }
+
+    .about-wrapper {
+        padding: 40px 24px;
+    }
+}

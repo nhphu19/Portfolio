@@ -16,14 +16,14 @@ const Layout = () => {
                 <div className="header-container">
                     <div className="header-logo">
                         <span>&lt;C/&gt;</span>
-                        NgoNghinh
+                        PhuNguyen
                     </div>
                     <div className="header-nav">
                         <a href="/" className={`header-nav-item ${!navLink ? 'header-nav-item__active' : ''}`}>
                             Home
                         </a>
                         <a
-                            href="/projects"
+                            href="/about"
                             className={`header-nav-item ${navLink == 'about' ? 'header-nav-item__active' : ''}`}
                         >
                             About

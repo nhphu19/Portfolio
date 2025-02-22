@@ -7,4 +7,28 @@
     @include mixins.tablet-and-mobile {
         min-height: calc(100vh - 68px - 131px);
     }
+
+    .project-tabs {
+        width: 100%;
+        display: flex;
+        margin: 20px 0;
+
+        .project-tab-item {
+            font-size: 14px;
+            color: vars.$white;
+            font-weight: 500;
+            cursor: pointer;
+            padding: 8px 12px;
+            border-radius: 12px;
+
+            &:hover {
+                background-color: vars.$gray;
+            }
+        }
+        .project-tab-item--active {
+            color: vars.$brand-01;
+            font-weight: 600;
+            background-color: vars.$gray;
+        }
+    }
 }
