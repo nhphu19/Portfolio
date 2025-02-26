@@ -3,9 +3,14 @@ import mouseScrollImg from '../../../assets/icons/home/mouse-scroll.png';
 
 const projectsInfo = [
     {
-        name: 'Calibee Company (Wolf Solutions)',
+        name: 'Calibee (Wolf Solutions)',
         role: 'Back-end Developer',
-        contributions: ['Improved web development and teamwork skills'],
+        contributions: [
+            'Developed and maintained RESTful APIs while optimized database schema. This significantly improved system scalability and query performance. In just six months, successfully launched the app on App Store & Google Play',
+            'Integrated MoMo/VNPay payment gateways with advanced transaction handling, ensuring secure and error-free financial transactions',
+            'Implemented Firebase push notifications, boosting real-time user engagement and improving retention rates',
+            'Automated background tasks using Node Schedule, enhancing system reliability and reducing manual workload',
+        ],
         technologies: [
             'Javascript',
             'PHP',
@@ -25,10 +30,12 @@ const projectsInfo = [
         },
     },
     {
-        name: 'Juyou Technology Company',
+        name: 'Juyou Technology',
         role: 'Front-end Developer',
         contributions: [
-            'Enhanced front-end development skills with a goal of becoming a full-stack developer and improving problem-solving abilities',
+            'Designed and built responsive UI for Stock Series, Exchange Series, and BVIS App, leading to a more engaging and seamless user experience',
+            'Developed a real-time chat system for BVIS App with WebSocket, enabling instant text, video, and audio messaging',
+            'Optimized UI/UX performance to enhance user accessibility and improving app efficiency',
         ],
         technologies: [
             'Javascript',

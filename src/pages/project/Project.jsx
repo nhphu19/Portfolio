@@ -11,6 +11,7 @@ import exchangeImg from '../../assets/images/project/exchange.png';
 import bvisImg from '../../assets/images/project/bvis.png';
 import bvisAdminImg from '../../assets/images/project/bvis_admin.png';
 import tmdbCloneImg from '../../assets/images/project/tmdb_clone.png';
+import _100days_js from '../../assets/images/project/100_days_js.png';
 
 const companyProjects = [
     {
@@ -30,11 +31,13 @@ const companyProjects = [
         description:
             'Calibee is an application that provides repair, cleaning, and household care services,catering to both Vietnamese and foreigners living in Vietnam',
         contributions: [
-            'Participated in database design and construction (> 20 Models)',
-            'Developed APIs for the Customer App',
-            'Developed APIs for Partner App',
+            'Designed & optimized database schema for customer & partner apps, ensuring smooth data management and scalability',
+            'Developed and maintained RESTful APIs for core functionalities such as authentication, booking, feedback, and attendance tracking',
+            'Integrated MoMo/VNPay payment system with real-time transaction monitoring, improving financial security and user trust',
+            'Implemented push notifications using Firebase, enhancing user engagement and providing real-time updates',
+            'Automated background processes using Node Schedule, significantly reducing operational overhead',
         ],
-        technologies: ['Javascript', 'ExpressJs', 'NodeJs', 'Dart', 'Flutter', 'MySQL', 'AWS', 'Firebase'],
+        technologies: ['Javascript', 'ExpressJs', 'NodeJs', 'Dart', 'Flutter', 'MySQL', 'AWS EC2', 'Firebase'],
         extends: {
             timeline: 'Nov.2022 – May.2023',
             teamSize: '10',
@@ -47,10 +50,11 @@ const companyProjects = [
         thumbnail: calibeeAdminImg,
         links: [],
         description:
-            'Calibee Admin is a web application that helps the operations team manage, monitor, analyze, and connect customers and partners based on the Calibee App',
+            'Calibee Admin is a web-based system designed to manage service providers, track performance, and support customer interactions, ensuring operational efficiency',
         contributions: [
-            'Developed back-end for the website',
-            'Developed font-end for the website',
+            'Built a powerful admin dashboard for business operations, enabling real-time data tracking and system management',
+            'Developed interactive data visualization with charts, enhancing business decision-making',
+            'Provided data analysis and statistical insights to the marketing team, enabling them to design targeted campaigns and optimize business strategies',
             "Wrote user guides for the system's functions for the operations team",
         ],
         technologies: ['PHP', 'Javascript', 'Laravel', 'Jquery', 'Bootstrap', 'MySQL', 'AWS'],
@@ -58,6 +62,44 @@ const companyProjects = [
             timeline: 'Apr.2023 – Jan.2024',
             teamSize: '6',
             country: 'Vietnam',
+        },
+    },
+    {
+        name: 'Bvis App H5',
+        role: 'Front-end Developer',
+        thumbnail: bvisImg,
+        links: [],
+        description:
+            'BVIS App is an online learning platform that enables students to take courses, interact with instructors, and exchange knowledge in a collaborative environment',
+        contributions: [
+            'Implemented key learning features like course viewing, joining, and reviewing, enriching the e-learning experience',
+            'Developed a real-time chat system with text, video, and audio support, fostering better communication between students and teachers',
+            'Enhanced mobile performance, ensuring smooth navigation and reduced load times',
+        ],
+        technologies: ['Typescript', 'VueJs', 'Uni-app', 'Java', 'Docker', 'MySQL', 'Redis', 'WebSocket'],
+        extends: {
+            timeline: 'July.2024 – Oct.2024',
+            teamSize: 8,
+            country: 'Korea',
+        },
+    },
+    {
+        name: 'Bvis Admin',
+        role: 'Front-end Developer',
+        thumbnail: bvisAdminImg,
+        links: [],
+        description:
+            'BVIS Admin is a management platform that facilitates course administration, instructor coordination, and communication between students, teachers, and support staff',
+        contributions: [
+            'Developed a comprehensive admin dashboard, streamlining management of teachers, students, and courses',
+            'Implemented a real-time chat system, improving communication efficiency for administrators and users',
+            'Integrated role-based access control to secure data and ensuring appropriate permission management',
+        ],
+        technologies: ['Typescript', 'ReactJs', 'Java', 'Docker', 'MySQL', 'Redis', 'WebSocket'],
+        extends: {
+            timeline: 'Aug.2024 – Oct.2024',
+            teamSize: 7,
+            country: 'Korea',
         },
     },
     {
@@ -105,36 +147,6 @@ const companyProjects = [
             country: 'China',
         },
     },
-    {
-        name: 'Bvis App H5',
-        role: 'Front-end Developer',
-        thumbnail: bvisImg,
-        links: [],
-        description:
-            'Bvis is an application that helps learn online courses, helps users learn and exchange knowledge with teachers',
-        contributions: ['Developed new features'],
-        technologies: ['Typescript', 'VueJs', 'Uni-app', 'Java', 'Docker', 'MySQL', 'Redis', 'WebSocket'],
-        extends: {
-            timeline: 'July.2024 – Oct.2024',
-            teamSize: 8,
-            country: 'Korea',
-        },
-    },
-    {
-        name: 'Bvis Admin',
-        role: 'Front-end Developer',
-        thumbnail: bvisAdminImg,
-        links: [],
-        description:
-            'Bvis Admin is a web application that helps the operations team manage, monitor, analyze, and connect teachers with corses, as well as teachers with students. It also features a chat function, allowing teachers, students, and the operations team to communicate.',
-        contributions: ['Developed new features'],
-        technologies: ['Typescript', 'ReactJs', 'Java', 'Docker', 'MySQL', 'Redis', 'WebSocket'],
-        extends: {
-            timeline: 'Aug.2024 – Oct.2024',
-            teamSize: 7,
-            country: 'Korea',
-        },
-    },
 ];
 
 const personalProjects = [
@@ -161,7 +173,7 @@ const personalProjects = [
     {
         name: '100 Days of JavaScript',
         role: 'Full-stack Developer',
-        thumbnail: tmdbCloneImg,
+        thumbnail: _100days_js,
         links: [
             {
                 url: 'https://100daysjavascript.nhphu19.info/',

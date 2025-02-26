@@ -21,11 +21,13 @@ const projectInfo = {
     description:
         'Calibee is an application that provides repair, cleaning, and household care services,catering to both Vietnamese and foreigners living in Vietnam',
     contributions: [
-        'Participated in database design and construction (> 20 Models)',
-        'Developed APIs for the Customer App',
-        'Developed APIs for Partner App',
+        'Designed & optimized database schema for customer & partner apps, ensuring smooth data management and scalability',
+        'Developed and maintained RESTful APIs for core functionalities such as authentication, booking, feedback, and attendance tracking',
+        'Integrated MoMo/VNPay payment system with real-time transaction monitoring, improving financial security and user trust',
+        'Implemented push notifications using Firebase, enhancing user engagement and providing real-time updates',
+        'Automated background processes using Node Schedule, significantly reducing operational overhead',
     ],
-    technologies: ['Javascript', 'ExpressJs', 'NodeJs', 'Dart', 'Flutter', 'MySQL', 'AWS', 'Firebase'],
+    technologies: ['Javascript', 'ExpressJs', 'NodeJs', 'Dart', 'Flutter', 'MySQL', 'AWS EC2', 'Firebase'],
     extends: {
         timeline: 'Nov.2022 – May.2023',
         teamSize: '10',

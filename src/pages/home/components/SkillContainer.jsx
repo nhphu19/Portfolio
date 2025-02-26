@@ -4,35 +4,27 @@ import mouseScrollImg from '../../../assets/icons/home/mouse-scroll.png';
 const skillsList = [
     {
         name: 'Programming Languages',
-        skills: 'Javascript · Typescript · PHP · Dart · AL',
+        skills: 'Javascript · Typescript · PHP · Dart',
     },
     {
-        name: 'Frameworks',
-        skills: 'ExpressJs · ReactJs · VueJs · Laravel · Flutter',
+        name: 'Frameworks & Libraries',
+        skills: 'NodeJs · ExpressJs · ReactJs · VueJs · Laravel · Flutter',
     },
     {
-        name: 'Softwares',
-        skills: 'VS Code · IntelliJ IDEA · Jira · Powershell',
-    },
-    {
-        name: 'DepOps',
-        skills: 'AWS EC2 · Linux Command Line',
-    },
-    {
-        name: 'Databases',
-        skills: 'MySQL · MSSQL · MongoDB',
+        name: 'Database & DevOps',
+        skills: 'MySQL · MongoDB · MSSQL · AWS EC2 · Linux',
     },
     {
         name: 'Others',
-        skills: 'Git · RESTfull API · HTML · CSS · SCSS · JQuery · phpFirebase · Dynamics 365 BC',
-    },
-    {
-        name: 'Languages',
-        skills: 'TOEIC RL 555 · TOEIC SW 250',
+        skills: 'Git · SCSS · Jquery · Tailwind CSS · Firebase',
     },
     {
         name: 'Soft Skills',
-        skills: 'Teamwork · Problem solving · Time management · Self learning new technologies · Adaptable',
+        skills: 'Problem-solving · Team collaboration · Time management · Self-learning',
+    },
+    {
+        name: 'Language',
+        skills: 'Good English reading and comprehension skills',
     },
 ];
 
