@@ -5,13 +5,13 @@ import mouseScrollImg from '../../../assets/icons/home/mouse-scroll.png';
 
 const ContactContainer = () => {
     return (
-        <div className="contact-container">
-            <div className="contact-wrapper">
-                <div className="contact-mouse-scroll">
+        <div className="contact-container section-container">
+            <div className="contact-wrapper section-wrapper">
+                <div className="mouse-scroll">
                     <img src={mouseScrollImg} alt="" />
                 </div>
 
-                <div className="contact-title">Contact</div>
+                <div className="title-header">Contact</div>
                 <div className="contact-sub-title">I’m currently available for freelance work</div>
                 <div className="contact-lable">Send Me A Message</div>
                 <div className="contact-form">

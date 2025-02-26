@@ -19,7 +19,7 @@ const infoData = {
 
 const DevContainer = () => {
     return (
-        <div className="dev-container">
+        <div className="dev-container section-container section-wrapper">
             <div className="dev-title">Developer</div>
 
             <div className="dev-wrapper">

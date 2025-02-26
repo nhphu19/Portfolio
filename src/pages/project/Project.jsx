@@ -195,9 +195,9 @@ const Project = () => {
     const [activeTab, setActiveTab] = useState('company');
 
     return (
-        <div className="project-container">
-            <div className="project-wrapper">
-                <div className="project-title">Projects</div>
+        <div className="project-container section-container">
+            <div className="project-wrapper section-wrapper">
+                <div className="title-header">Projects</div>
                 <div className="project-sub-title">
                     Below are the projects I worked on at various companies to gain experience.
                 </div>

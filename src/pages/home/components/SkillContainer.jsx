@@ -30,13 +30,13 @@ const skillsList = [
 
 const SkillContainer = () => {
     return (
-        <div className="skill-container">
-            <div className="skill-wrapper">
-                <div className="skill-mouse-scroll">
+        <div className="skill-container section-container">
+            <div className="skill-wrapper section-wrapper">
+                <div className="mouse-scroll">
                     <img src={mouseScrollImg} alt="" />
                 </div>
 
-                <div className="skill-title">Skills</div>
+                <div className="title-header">Skills</div>
                 <div className="skill-sub-title">I am striving to never stop learning and improving</div>
 
                 <div className="skill-block">

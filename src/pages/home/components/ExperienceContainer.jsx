@@ -57,13 +57,13 @@ const projectsInfo = [
 
 const ExperienceContainer = () => {
     return (
-        <div className="project-container">
-            <div className="project-wrapper">
-                <div className="project-mouse-scroll">
+        <div className="project-container section-container">
+            <div className="project-wrapper section-wrapper">
+                <div className="mouse-scroll">
                     <img src={mouseScrollImg} alt="" />
                 </div>
 
-                <div className="project-title">Experiences</div>
+                <div className="title-header">Experiences</div>
 
                 <div className="project-block-list">
                     {projectsInfo.map((projectInfo, index) => (

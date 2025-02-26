@@ -3,13 +3,13 @@ import mouseScrollImg from '../../../assets/icons/home/mouse-scroll.png';
 
 const AboutContainer = () => {
     return (
-        <div className="about-container">
-            <div className="about-wrapper">
-                <div className="about-mouse-scroll">
+        <div className="about-container section-container">
+            <div className="about-wrapper section-wrapper">
+                <div className="mouse-scroll">
                     <img src={mouseScrollImg} alt="" />
                 </div>
 
-                <div className="about-title">About Me</div>
+                <div className="title-header">About Me</div>
 
                 <div className="about-content">
                     <div className="about-content__left-description">
